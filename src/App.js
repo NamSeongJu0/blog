@@ -1,21 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
 import {useState} from "react";
 
 function App() {
 
-  let [title, setTitle] = useState(['경기도', '강원도', '제주도']);
-  let [clickup, setClickup] = useState([0, 0, 0]);
-  let [input, setInput] = useState('');
-  let [titlenum, setTitlenum] = useState(0);
+  // let [title, setTitle] = useState(['경기도', '강원도', '제주도']);
+  // let [clickup, setClickup] = useState([0, 0, 0]);
+  // let [input, setInput] = useState('');
+  // let [titlenum, setTitlenum] = useState(0);
 
-  let [modal, setModal] = useState(false);
+  // let [modal, setModal] = useState(false);
   
   return (
 
     
     <div className="App">
-      <div className="black-nav">
+      {/* <div className="black-nav">
         <h4 style = {{color: 'red',
       fontSize: '20px'}}>Reat Blog</h4>
       </div>
@@ -33,12 +32,6 @@ function App() {
                 e.stopPropagation();
               }}>👍</span>{clickup[i]}</h4>
               <p>2월 18일 발행</p>
-
-              {/* <button onClick = {() => {
-                let copy = [...clickup];
-                copy.splice(i, 1);
-                setClickup(copy);
-              }}>like remove</button> */}
 
               <button onClick = {() => {
                 let copy = [...title];
@@ -68,19 +61,11 @@ function App() {
         setClickup(copy1);
       }}>글 추가</button>
 
-      {/* <Modal title = {title} color = {'skyblue'}></Modal>
-      <Modal title = {title} color = {'lightgray'}></Modal>  */}
-
-
         {
           modal === true ? <Modal title = {title} setTitle = {setTitle} setModal = {setModal} titlenum = {titlenum} /> : null
-        }
+        } */}
 
-
-        
     </div>
-
-    
 
   );
 }
