@@ -1,88 +1,71 @@
-import './App.css';
-import {useState} from "react";
+import './App.scss';
+// import {useState} from "react";
+
+import { Button, Container, Form, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+// import { Routes, Route, Link } from 'react-router-dom'
+
+// 폰트어썸
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faApple } from "@fortawesome/free-brands-svg-icons";
+// export default () => <FontAwesomeIcon icon={faCamera} />;
+
+
+
 
 function App() {
+  // let [apple, setApple] = useState(data);
 
-  // let [title, setTitle] = useState(['경기도', '강원도', '제주도']);
-  // let [clickup, setClickup] = useState([0, 0, 0]);
-  // let [input, setInput] = useState('');
-  // let [titlenum, setTitlenum] = useState(0);
 
-  // let [modal, setModal] = useState(false);
-  
   return (
 
-    
-    <div className="App">
-      {/* <div className="black-nav">
-        <h4 style = {{color: 'red',
-      fontSize: '20px'}}>Reat Blog</h4>
-      </div>
 
-      {
-        title.map(function (a, i) {
-          return (
-            <div className="list" key = {i}>
-              <h4 onClick = {() => {
-                setModal(!modal);
-              }}>{title[i]} <span onClick={(e) => {
-                let copy = [...clickup];
-                copy[i] = clickup[i] +1;
-                setClickup(copy);
-                e.stopPropagation();
-              }}>👍</span>{clickup[i]}</h4>
-              <p>2월 18일 발행</p>
+    <>
 
-              <button onClick = {() => {
-                let copy = [...title];
-                copy.splice(i, 1);
-                setTitle(copy);
+      <Navbar bg="light" expand="lg" className='bar'>
+        <Container fluid>
+          <Navbar.Brand href="#"><FontAwesomeIcon icon={ faApple } className = "Apple" /></Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav
+              className="me-auto my-2 my-lg-0"
+              style={{ maxHeight: '100px' }}
+              navbarScroll
+            >
+              <Nav.Link href="#action1">Home</Nav.Link>
+              <Nav.Link href="#action2">Link</Nav.Link>
+              <NavDropdown title="Link" id="navbarScrollingDropdown">
+                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action4">
+                  Another action
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action5">
+                  Something else here
+                </NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link href="#" disabled>
+                Link
+              </Nav.Link>
+            </Nav>
+            <Form className="d-flex">
+              <Form.Control
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+              />
+              <Button variant="outline-success">Search</Button>
+            </Form>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 
-                let copy1 = [...clickup];
-                copy1.splice(i, 1);
-                setClickup(copy1);
-              }}>글 삭제</button>
-            </div>
-          )
-        })
-      }
+      
 
-      <input type="text" onChange = {(e) => {
-        setInput(e.target.value);
-      }}/>
+    </>
 
-      <button onClick={() => {
-        let copy = [...title];
-        copy.unshift(input);
-        setTitle(copy);
-        
-        let copy1 = [...clickup];
-        copy1.unshift(0);
-        setClickup(copy1);
-      }}>글 추가</button>
-
-        {
-          modal === true ? <Modal title = {title} setTitle = {setTitle} setModal = {setModal} titlenum = {titlenum} /> : null
-        } */}
-
-    </div>
 
   );
 }
 
-
-function Modal(props) {
-return(
-  <div className="modal">
-    <h4>{props.title[props.titlenum]}</h4>
-    <p>날짜</p>
-    <p>상세내용</p>
-    <button onClick={() => {
-      props.setModal(false);
-    }}>창닫기</button>
-
-    
-  </div>
-);
-}
 export default App;
