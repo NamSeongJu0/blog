@@ -3,23 +3,28 @@
 * {
     margin: 0;
     padding: 0;
+    // text-align: center;
 }
 
 a {
     text-decoration: none;
+    color: #000000;
 }
 
 ol,
 ul,
 li {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .bar {
     width: 80%;
     height: 60px;
-    margin: 0 auto;
-    background-color: #333 !important;
+    margin: 30px auto;
+    z-index: 200;
+    // background-color: #333 !important;
 
 
     .container-fluid {
@@ -27,13 +32,18 @@ li {
         padding-left: 0;
 
         .navbar-brand {
-            width: 40px;
-            height: 40px;
+            width: 120px;
+            height: 60px;
+            display: inline-block;
 
-            .Apple {
-                width: 100%;
+            .logo {
+                width: 120px;
                 height: 100%;
-                color: #fff !important;
+                line-height: 60px;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 0;
+                animation: play 1.2s steps(34) 0s forwards;
 
                 &:hover {
                     transition: all 0.5s ease;
@@ -58,7 +68,8 @@ li {
 
             .nav-link,
             .navdropdown-item {
-                color: #fff !important;
+                color: #333 !important;
+                font-size: 18px;
 
                 &:hover {
                     transition: all 0.5s ease;
@@ -71,12 +82,11 @@ li {
             position: absolute;
             right: 8px;
             .btn {
-                color: #fff;
-                border-color: #fff;
+                color: #333;
+                border-color: #333;
                 &:hover {
                     transition: all 0.5s ease;
                     border-color: #ffa69e;
-                    color: #000000;
                     background-color: #fff;
                 }
             }
@@ -89,3 +99,254 @@ li {
         }
     }
 }
+
+
+
+// 나만의 공간 만들기
+.con1 {
+    margin: 60px auto;
+
+.col-md-4 {
+
+    text-align: center;
+}
+
+}
+
+.con2 {
+    width: auto;
+    margin: 60px auto;
+    display: block !important;
+
+    .row {
+        padding: 1% 0;
+    }
+
+    .row1 {
+        padding: 0 0 3% 0;
+    }
+
+    .row1_1 {
+        padding: 0 0 5.6% 0;
+    }
+
+    .row2 {
+        padding: 0;
+    }
+
+    .row3 {
+        padding-top: 3.8%;
+    }
+
+    .row4 {
+        padding: 1% 0 0;
+    }
+
+    .col-md-4 {
+        padding: 0.65%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        // margin: 2%;
+    }
+}
+
+
+
+.Footer {
+    width: 100%;
+    height: auto;
+    background-color: #eee;
+
+    .Foot_1 {
+        width: 90%;
+        height: 260px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 15px 15px 20px 15px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-bottom: 1px solid #555;
+        
+
+        .foot1 {
+            width: 230px;
+            margin-right: 15px; 
+
+            .first {
+                font-weight: bold;
+            }
+
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .Foot_2 {
+        width: 90%;
+        height: 180px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 20px 15px 15px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .Img {
+            width: 30%;
+            height: 40px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            li {
+                margin-right: 15px;
+
+                & {
+                  font-size: 30px;
+                  
+                  &:hover {
+                    cursor: pointer;
+                    transition: 0.5s ease;
+                    color: #ffa69e;
+                  }
+                }
+            }
+        }
+
+        .textbox {
+            width: 40%;
+            // height: 80px;
+            box-sizing: border-box;
+            padding: 5px;
+
+            .put_1 {
+                width: 100%;
+                 
+
+                input {
+                    width: 60%;
+                    height: 45px;
+                    margin-right: 15px;
+                    border-radius: 10px;
+                    border: none;
+                    box-sizing: border-box;
+                    padding: 3px 3px 3px 5px;
+                }
+
+                .btn {
+                    width: 45px;
+                    height: 45px;
+                    background-color: rgb(172, 255, 47);
+                    border-radius: 10px;
+                    margin-bottom: 5px;
+                    position: relative;
+
+                    svg {
+                        font-size: 20px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+
+                        &:hover {
+                            transition: 0.5s ease;
+                            color: #ffa69e;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .put_2 {
+            width: 100%;
+
+            input {
+                margin-right: 5px;
+            }
+
+            span {
+                width: 80%;
+            }
+        }
+    }
+
+    .List {
+        width: 90%;
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 20px 15px 15px 15px;
+
+        .list {
+            width: 70%;
+            height: 50px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            div {
+                width: 30%;
+            }
+
+            ul {
+                width: 70%;
+                height: 50px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+
+                li {
+
+                    a {
+                        &:hover {
+                            transition: 0.5s ease;
+                            color: #ffa69e;
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        .kr {
+            width: 10%;
+            display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            
+            svg {
+                font-size: 20px;
+                margin-right: 15px;
+
+                &:hover {
+                    cursor: pointer;
+                    transition: 0.5s ease;
+                    color: #ffa69e;
+                }
+            }
+        }
+    }
+
+    
+
+    
+}
+
+
+//화살표 지우기
+.slick-prev, .slick-next {
+    display: none !important;
+}
+
+
+
+
+
