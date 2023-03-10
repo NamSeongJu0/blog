@@ -2,35 +2,37 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import Product from '../component/Product';
+import Banner from '../component/Banner';
+
 import { useState } from 'react';
 import logi from '../logi';
 
+
+
+// 슬라이더
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
 
+// 스타일
+// import styled from 'styled-components';
+
+// let style = styled.main_banner`
+//     background-image: url(img/props.head[0].imgUrl)`;
+
+
+
 function Home(props) {
 
     let [logi1] = useState(logi);
+
     console.log(logi1[0].imgUrl)
-    // 메인 슬라이드 셋팅 값
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        // autoplay: true,
-        autoplaySpeed: 2000,
-        centerPadding: '0px',
-        arrow: false,
+    console.log(props.head[0].imgUrl)
 
-    };
-
+    // 전자 기기 슬라이드 셋팅 값
     const settings1 = {
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -43,28 +45,15 @@ function Home(props) {
 
     return (
 
-        // 메인 슬라이드 이미지
-        <div className='head_img'>
 
-            <Slider {...settings}>
+        <div className='mainHead'>
 
-                <div>
-                    <img src={props.head[0].imgUrl} alt="item1" width="80%" height="650px" style={{ margin: "0 auto" }} />
-                </div>
-
-                <div>
-                    <img src={props.head[1].imgUrl} alt="item2" width="80%" height="650px" style={{ margin: "0 auto" }} />
-                </div>
-
-                <div>
-                    <img src={props.head[2].imgUrl} alt="item3" width="80%" height="650px" style={{ margin: "0 auto" }} />
-                </div>
-
-                <div>
-                    <img src={props.head[3].imgUrl} alt="item4" width="80%" height="650px" style={{ margin: "0 auto" }} />
-                </div>
-
-            </Slider>
+            {/* 메인 슬라이드 이미지 */}
+            <Container fluid className='main_banner' style={{ background: 'url(' + props.head[0].imgUrl + ')', backgroundRepeat: 'round', height: '45vw'}}>
+                <Row>
+                    <Banner />
+                </Row>
+            </Container>
 
 
             {/* 나만의 공간 만들기 */}
@@ -163,7 +152,7 @@ function Home(props) {
                             </Row>
                         </Col>
 
-                        <Col md = {8}>
+                        <Col md={8}>
                             <Row className='row4'>
                                 <img src={logi1[10].imgUrl} alt="item10" />
                             </Row>

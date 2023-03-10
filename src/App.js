@@ -1,7 +1,7 @@
 import './App.scss';
 import {useState} from "react";
-import data from './data';
 import data1 from './data1';
+import data from './data';
 import Home from './Routes/Home';
 
 
@@ -19,8 +19,8 @@ import {Routes, Route, useNavigate} from 'react-router-dom';
 function App() {
   // let [logo, setLogo] = useState('');
   let navigate = useNavigate();
-  let [head, setHead] = useState(data);
   let [dlist, setDlist] = useState(data1);
+  let [head, steHead] = useState(data);
   let [res, setRes] = useState([0, 1, 2]);
   
 
@@ -71,7 +71,7 @@ function App() {
 
 
     <Routes>
-      <Route path = '/' element = {<Home head = {head} setHead = {setHead} res = {res} setRes = {setRes} dlist = {dlist} setDlist = {setDlist}/>}></Route>
+      <Route path = '/' element = {<Home head = {head} steHead = {steHead} res = {res} setRes = {setRes} dlist = {dlist} setDlist = {setDlist}/>}></Route>
     </Routes>
 
       

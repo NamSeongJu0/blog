@@ -100,7 +100,85 @@ li {
     }
 }
 
+.mainHead {
+    .main_banner {
+        position: relative;
 
+        section {
+            width: 87%;
+            margin: 0 auto;
+            position: absolute;
+            left: 85%;
+            top: 50%;
+            transform: translate(-85%, -50%);
+
+            h1 {
+                font-size: 3.2rem;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            .btn_1 {
+                width: 25%;
+                height: 100px;
+                line-height: 100px;
+
+                a {
+                    width: 180px;
+                    display: inline-block;
+                    line-height: 60px;
+                    text-align: center;
+                    background-color: #555;
+                    color: #fff;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    box-sizing: border-box;
+                    padding: 5px;
+                    border: 1px solid #555;
+
+                    &:first-child {
+                        margin-right: 10px;
+                    }
+
+                    &:hover {
+                        transition: all 0.5s ease;
+                        color: #555;
+                        background-color: rgba($color: #fff, $alpha: 0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.productinfo {
+    width: 80%;
+    text-align: left;
+    margin: 20px auto;
+
+    h4 {
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    p:nth-of-type(2) {
+        font-size: 16px;
+
+        &:hover {
+            cursor: pointer;
+            font-weight: 400;
+            transition: all 0.5s ease;
+            color: #ffa69e;
+        }
+    }
+}
 
 // 나만의 공간 만들기
 .con1 {
@@ -149,7 +227,6 @@ li {
     img {
         width: 100%;
         height: 100%;
-        // margin: 2%;
     }
 }
 
@@ -340,6 +417,11 @@ li {
     
 }
 
+
+.slick-dots {
+    position: absolute;
+    bottom: 45px;
+}
 
 //화살표 지우기
 .slick-prev, .slick-next {
