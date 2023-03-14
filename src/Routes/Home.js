@@ -9,10 +9,13 @@ import logi from '../logi';
 
 
 
+
+
 // 슬라이더
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
+
 
 // 스타일
 // import styled from 'styled-components';
